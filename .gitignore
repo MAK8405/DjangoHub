@@ -1,0 +1,60 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django migrations (optional – keep if shared among team)
+**/migrations/
+!**/migrations/__init__.py
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.python-version
+
+# VSCode settings
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Static files (optional – only ignore if auto-generated)
+staticfiles/
+static/
+assets/
+
+# Media files (optional – usually user-uploaded)
+media/
+
+# SQLite DB (ignore only if not used for production)
+*.sqlite3
+
+# Coverage and test output
+htmlcov/
+.coverage
+.tox/
+.nox/
+pytest_cache/
+coverage.xml
+nosetests.xml
+test.db
+
+# Logs
+*.log
+
+# Env files
+.env
+.env.*
+
+# Node modules (if frontend is integrated)
+node_modules/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
