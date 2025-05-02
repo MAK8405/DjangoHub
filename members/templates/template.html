@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <ul>
-      {% for x in mymembers %}
-      <li>{{ x.firstname }}</li>
-      {%endfor %}
-    </ul>
-    <p>
-      In views.py you can see how to import and fetch members from teh database.
-    </p>
+    {% if greeting == 1 %}
+    <h1>Hello</h1>
+    {% elif greeting == 2 %}
+    <h1>Welcome</h1>
+    {% else %}
+    <h1>GoodBye</h1>
+    {% endif %}
+    <p>In views.py you can see what the greeting variable looks like.</p>
   </body>
 </html>
