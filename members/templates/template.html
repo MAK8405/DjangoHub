@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html>
   <body>
-    {% if greeting == 1 %}
-    <h1>Hello</h1>
-    {% elif greeting == 2 %}
-    <h1>Welcome</h1>
-    {% else %}
-    <h1>GoodBye</h1>
+    {% if greeting == 1 and day == 'Friday' or greeting == 5 %}
+    <h1>Hello Weekend!</h1>
     {% endif %}
-    <p>In views.py you can see what the greeting variable looks like.</p>
+    <p>In views.py you can see what the greeting looks like.</p>
   </body>
 </html>
