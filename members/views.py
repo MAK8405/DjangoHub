@@ -29,7 +29,7 @@ def main(request):
 def testing(request):
     template = loader.get_template("template.html")
     context = {
-        "greeting": 5,
-        "day": "Friday",
+        "x": ["Apple", "Banana", "Cherry"],
+        "y": ["Apple", "Banana", "Cherry"],
     }
     return HttpResponse(template.render(context, request))
