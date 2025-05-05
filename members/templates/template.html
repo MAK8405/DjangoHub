@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
   <body>
-      {% if x is not y %}
-    <h1>YES</h1>
-    {% else %}
-    <h1>NO</h1>
-    {% endif %}
-    <p>
-  In views.py you can see what the x and y variables look like.    </p>
+      {% for x in cars %}
+    <h1>{{ x.brand }}</h1>
+    <p>{{ x.model }}</p>
+    <p>{{ x.year }}</p>
+    {% endfor %}
+    <p>In views.py you can see what the cars variables look like.</p>
   </body>
 </html>
