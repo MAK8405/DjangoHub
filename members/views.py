@@ -29,22 +29,6 @@ def main(request):
 def testing(request):
     template = loader.get_template("template.html")
     context = {
-        "cars": [
-            {
-                "brand": "Ford",
-                "model": "Mustang",
-                "year": "1965",
-            },
-            {
-                "brand": "Ford",
-                "model": "Bronco",
-                "year": "1970",
-            },
-            {
-                "brand": "Volvo",
-                "model": "P1800",
-                "year": "1964",
-            },
-        ]
+        "emptytestobject": [],
     }
     return HttpResponse(template.render(context, request))
