@@ -2,12 +2,15 @@
 <html>
   <body>
     <ul>
-      {% for x in emptytestobject %}
-      <li>{{ x.firstname }}</li>
-      {% empty %}
-      <li>No members</li>
+      {% for x in fruits %}
+      <li
+        {% if forloop.first %}
+        style='background-color:lightblue;'
+        {% endif %}
+        >{{ x }}
+      </li>
       {% endfor %}
     </ul>
-    <p>In views.py you can see the emptytestobject.</p>
+    <p>In views.py you can see what the fruits object looks like.</p>
   </body>
 </html>
