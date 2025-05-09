@@ -3,12 +3,7 @@
   <body>
     <ul>
       {% for x in fruits %}
-      <li
-        {% if forloop.first %}
-        style='background-color:lightblue;'
-        {% endif %}
-        >{{ x }}
-      </li>
+      <li>{{ forloop.revcounter0 }}</li>
       {% endfor %}
     </ul>
     <p>In views.py you can see what the fruits object looks like.</p>
