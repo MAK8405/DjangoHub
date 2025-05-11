@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
   <body>
-    {% include "mymenu.html" with me="MAK" sponsor="ME" %}
-    <h1>Welcome</h1>
-    <p>This is my web site.</p>
-
-    <p>Check out mymenu.html to see the HTML content of the include.</p>
+   <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+    </tr>
+    {% for x in mymembers %}
+    <tr>
+      <td>
+        {{ x.id }}
+      </td>
+      <td>{{ x.firstname }}</td>
+      <td>{{ x.lastname }}</td>
+    </tr>
+    {% endfor %}
+   </table>
+<p>In views.py you can see how ot import and fetch members from the database.</p>
   </body>
 </html>
