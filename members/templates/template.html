@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <body>
-   <table border="1">
+<body>
+
+<p>The queryset object:</p>
+
+{{ mymembers }}
+
+<p>Loop through the items:</p>
+
+<table border='1'>
+  <tr>
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  {% for x in mymembers %}
     <tr>
-      <th>ID</th>
-      <th>Firstname</th>
-      <th>Lastname</th>
-    </tr>
-    {% for x in mymembers %}
-    <tr>
-      <td>
-        {{ x.id }}
-      </td>
+      <td>{{ x.id }}</td>
       <td>{{ x.firstname }}</td>
       <td>{{ x.lastname }}</td>
     </tr>
-    {% endfor %}
-   </table>
-<p>In views.py you can see how ot import and fetch members from the database.</p>
-  </body>
-</html>
+  {% endfor %}
+</table>
+
+</body>
+</html>     
