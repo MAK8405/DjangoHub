@@ -1,6 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from .models import Member
+from django.db.models import Q
 
 
 def members(request):
@@ -27,7 +28,9 @@ def main(request):
 
 
 def testing(request):
-    mydata = Member.objects.filter(firstname="Tobias").values()
+    mydata = Member.objects.filter(
+        Q(firstname="Linus") | Q(firstname="Tobias")
+    ).values()
     template = loader.get_template("template.html")
     context = {
         "mymembers": mydata,
