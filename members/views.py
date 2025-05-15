@@ -28,9 +28,7 @@ def main(request):
 
 
 def testing(request):
-    mydata = Member.objects.filter(
-        Q(firstname="Linus") | Q(firstname="Tobias")
-    ).values()
+    mydata = Member.objects.filter(firstname__startswith="L")
     template = loader.get_template("template.html")
     context = {
         "mymembers": mydata,
