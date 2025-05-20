@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'mystyles.css' %}" />
+  </head>
 
-<head>
-  <title>{% block title %}{% endblock %}</title>
-</head>
-
-<body>
+  <body>
     {% block content %} {% endblock %}
   </body>
-
 </html>
