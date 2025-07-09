@@ -1,19 +1,26 @@
 [project]
-name = "djangow3"
+name = "members"
 version = "0.1.0"
 description = ""
 authors = [
     {name = "MAK8405",email = "mahdiahmadi2005kf@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10,<4.0"
 dependencies = [
-    "django (>=5.2.3,<6.0.0)",
+    "django (>=4.2,<5.0)",
     "psycopg2-binary (>=2.9.10,<3.0.0)",
-    "python-dotenv (>=1.1.1,<2.0.0)"
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "django-bootstrap-v5 (>=1.0.11,<2.0.0)"
 ]
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = true
+
+[[tool.poetry.packages]]
+include = "members"
